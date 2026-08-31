@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Learn the terminal with MeenLearn — files, navigation, installs, pipes, running your code and reading real errors, in 20 clear step-by-step lessons.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Terminal — MeenLearn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="index.html"><span class="mark">&lt;/&gt;</span>Meen<span style="color:var(--gold)">Learn</span><small>by MeenDev</small></a>
+    <nav class="headnav">
+      <a href="index.html">Home</a>
+      <a href="ai.html">AI Tutor</a>
+      <a href="playground.html">Playground</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div class="headtools">
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">&#9776;</button>
+      <button id="theme" aria-label="Toggle theme">☾</button>
+    </div>
+  </div>
+  <div class="tabstrip-wrap"><nav class="tabstrip" id="tabstrip" aria-label="Learning tracks"></nav></div>
+</header>
+
+<main>
+  <section class="subject-hero" id="subHero">
+    <div>
+      <div class="icobig" id="subIcon"></div>
+      <h1 id="subTitle"></h1>
+      <p><span id="subTagline" style="color:var(--c);font-weight:700"></span> — <span id="subDesc"></span></p>
+    </div>
+    <mark id="subLevel"></mark>
+  </section>
+
+  <div class="workspace">
+    <aside class="lesson-index" id="lessonIndex">
+      <div class="index-head">
+        <strong>Course map</strong>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <input id="lessonSearch" class="lesson-search" type="search" placeholder="Find a lesson…">
+      <div id="lessonList"></div>
+    </aside>
+    <article class="lesson-panel" id="lessonPanel">
+      <label class="lkicker" id="lKicker"></label>
+      <h2 id="lTitle"></h2>
+      <div class="needbar hide" id="lNeeds"></div>
+      <p class="ltext" id="lText"></p>
+      <section class="lesson-definition" id="lDefinition"></section>
+      <div class="example">
+        <div class="code-side">
+          <header>example <button id="copyBtn">Copy</button><a id="tryPlayLink" class="tryplay hide" href="playground.html">Playground ↗</a></header>
+          <pre id="lCode"></pre>
+        </div>
+        <div class="result-side" id="exampleResult"></div>
+      </div>
+      <div class="lesson-learning-grid">
+        <section class="learning-card visual-card">
+          <span>VISUAL EXPLANATION</span>
+          <div id="lVisual"></div>
+        </section>
+        <section class="learning-card">
+          <span>PRACTICAL TASK</span>
+          <p id="lPractical"></p>
+        </section>
+        <section class="learning-card">
+          <span>COMMON MISTAKE</span>
+          <p id="lMistake"></p>
+        </section>
+        <section class="learning-card">
+          <span>PRO TIP</span>
+          <p id="lTip"></p>
+        </section>
+      </div>
+      <div class="challenge-box">
+        <div><span class="eyebrow">YOUR TURN</span><h3>Can you do it without looking?</h3><p id="lChallenge"></p></div>
+        <button class="btn small" id="revealBtn">Reveal task</button>
+      </div>
+      <div class="lesson-nav">
+        <button id="prevBtn">← Previous</button>
+        <span id="navPos"></span>
+        <div class="nav-right">
+          <button id="doneBtn" type="button">Mark done ✓</button>
+          <button id="nextBtn">Next lesson →</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section class="quiz-card">
+    <div class="quiz-inner">
+      <div>
+        <label class="eyebrow">KNOWLEDGE CHECK</label>
+        <h3>Test your <span id="subjectName"></span> basics.</h3>
+        <p>A five-question check (drawn from a bank of eight) before you move to the next topic.</p>
+        <button class="btn small" id="quizStart" style="margin-top:12px">Start quiz →</button>
+      </div>
+      <div class="score-chip"><b id="bestScore">—</b><span>best score</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 MeenLearn <b>by MeenDev</b></span>
+  <span id="subCount"></span>
+</footer>
+
+<div class="modal hide" id="modal">
+  <div class="modal-box">
+    <button class="close" id="quizClose" aria-label="Close">×</button>
+    <label class="eyebrow">KNOWLEDGE CHECK</label>
+    <div id="quizBody"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="lessons1.js"></script>
+<script src="lessons2.js"></script>
+<script src="lessons3.js"></script>
+<script src="lessons4.js"></script>
+<script src="lessons5.js"></script>
+<script src="script.js"></script>
+<script>initSubjectPage("terminal");</script>
+</body>
+</html>

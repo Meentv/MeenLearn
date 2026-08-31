@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MeenLearn playground — write HTML, CSS and JavaScript and see it run instantly. No account, no server, nothing leaves your browser.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Playground — MeenLearn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="index.html"><span class="mark">&lt;/&gt;</span>Meen<span style="color:var(--gold)">Learn</span><small>by MeenDev</small></a>
+    <nav class="headnav">
+      <a href="index.html">Home</a>
+      <a href="ai.html">AI Tutor</a>
+      <a href="index.html#subjects">Subjects</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div class="headtools">
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">&#9776;</button>
+      <button id="theme" aria-label="Toggle theme">☾</button>
+    </div>
+  </div>
+  <div class="tabstrip-wrap"><nav class="tabstrip" id="tabstrip" aria-label="Learning tracks"></nav></div>
+</header>
+
+<main>
+  <section class="section tight">
+    <div class="heading">
+      <div><span class="eyebrow">PLAYGROUND</span><h2>Write it. See it.</h2></div>
+      <p>Switch between HTML, CSS and JavaScript — everything runs together in the preview. Ctrl/Cmd + Enter runs too. Any lesson with a live demo has a <b>Playground ↗</b> button that loads its code right here.</p>
+      <span id="playBadge" class="play-badge"></span>
+    </div>
+
+    <div class="starter-row">
+      <button data-s="blank">Blank page</button>
+      <button data-s="counter">Click counter</button>
+      <button data-s="card">Product card</button>
+      <button data-s="form">Simple form</button>
+    </div>
+
+    <div class="play-tabs">
+      <button id="tabHtml" class="active">HTML</button>
+      <button id="tabCss">CSS</button>
+      <button id="tabJs">JavaScript</button>
+    </div>
+
+    <div class="play">
+      <div class="editor">
+        <div class="editor-head"><span>EDITOR</span><button id="resetPlay">Reset</button></div>
+        <textarea id="areaHtml" style="display:block" spellcheck="false" aria-label="HTML editor"></textarea>
+        <textarea id="areaCss" style="display:none" spellcheck="false" aria-label="CSS editor"></textarea>
+        <textarea id="areaJs" style="display:none" spellcheck="false" aria-label="JavaScript editor"></textarea>
+        <button class="run" id="run">▶ Run code</button>
+      </div>
+      <div class="preview">
+        <header>LIVE PREVIEW <span>Ready</span></header>
+        <iframe id="frame" sandbox="allow-scripts" title="Playground live preview"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 MeenLearn <b>by MeenDev</b></span>
+  <span>Nothing you type here is saved or sent anywhere</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="lessons1.js"></script>
+<script src="lessons2.js"></script>
+<script src="lessons3.js"></script>
+<script src="lessons4.js"></script>
+<script src="lessons5.js"></script>
+<script src="script.js"></script>
+<script>initPlayground();</script>
+</body>
+</html>

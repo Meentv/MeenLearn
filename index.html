@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MeenLearn by MeenDev — learn programming thinking, the terminal, HTML, CSS, JavaScript, Python, SQL, web hosting, Git and 12 real projects, with 203 clear lessons, live examples and quick knowledge checks. Built-in AI tutor, no account needed.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>MeenLearn — Learn to build, line by line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="index.html"><span class="mark">&lt;/&gt;</span>Meen<span style="color:var(--gold)">Learn</span><small>by MeenDev</small></a>
+    <nav class="headnav">
+      <a href="ai.html">AI Tutor</a>
+      <a href="#subjects">Subjects</a>
+      <a href="playground.html">Playground</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="headtools">
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">&#9776;</button>
+      <button id="theme" aria-label="Toggle theme">☾</button>
+      <a class="btn small" href="programming.html">Start learning</a>
+    </div>
+  </div>
+  <div class="tabstrip-wrap"><nav class="tabstrip" id="tabstrip" aria-label="Learning tracks"></nav></div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">BY MEENDEV · 10 LEARNING TRACKS · BUILT TO TEACH FROM ZERO</span>
+      <h1>Learn to build.<br><i>Not just memorize.</i></h1>
+      <p class="lead">Start with programming thinking, move through the terminal, HTML, CSS, JavaScript, Python, SQL and hosting — then prove it by building 12 real projects, explained step by step the way the best tutorials teach. Every lesson shows it running, tells you the apps you need first, and ends with a challenge.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="programming.html">Start from zero →</a>
+        <a class="btn ghost" href="playground.html">Try the playground</a>
+      </div>
+      <div class="hero-note">PROGRAMMING · TERMINAL · HTML · CSS · JAVASCRIPT · PYTHON · SQL · WEB &amp; HOSTING · GIT · PROJECTS</div>
+    </div>
+    <div class="hero-visual">
+      <div class="cube3d" aria-hidden="true">
+        <div class="cube-face">{ }</div>
+        <div class="cube-face">&lt;/&gt;</div>
+        <div class="cube-face">$</div>
+        <div class="cube-face">JS</div>
+        <div class="cube-face">PY</div>
+        <div class="cube-face">SQL</div>
+      </div>
+      <div class="hero-card tilt-card">
+        <div class="bar"><b></b><b></b><b></b><span>meenlearn / html / lesson-01</span></div>
+        <div class="hero-split">
+          <div class="code">LESSON 01 · HTML<br><br><span class="k">&lt;main&gt;</span><br>&nbsp;&nbsp;&lt;h1&gt;Hello, world&lt;/h1&gt;<br>&nbsp;&nbsp;&lt;p&gt;Start building.&lt;/p&gt;<br><span class="k">&lt;/main&gt;</span></div>
+          <div class="out">
+            <label>WHAT THE BROWSER SEES</label>
+            <h3>Hello, world</h3>
+            <p style="margin:0;color:#5c6270">Start building.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight reveal">
+    <div class="stat-row">
+      <div class="stat-box"><b id="courseTotal">10</b><span>learning tracks</span></div>
+      <div class="stat-box"><b id="lessonTotal">203</b><span>step-by-step lessons</span></div>
+      <div class="stat-box"><b>∞</b><span>practice opportunities</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="glossary">
+    <div class="heading reveal">
+      <div><span class="eyebrow">PLAIN-ENGLISH GLOSSARY</span><h2>Before the lessons, the vocabulary.</h2></div>
+      <p>Ten words you'll see everywhere on this site — in one honest sentence each.</p>
+    </div>
+    <div class="glossary-grid">
+      <div class="def-card tilt-card reveal" style="--c:#C26DDB"><span class="ic">{ }</span><span class="expand">The foundation</span><h3>Programming</h3><p>The general practice of writing instructions a computer can follow. Every language below is one way of doing it.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#E86FA4"><span class="ic">$</span><span class="expand">The command line</span><h3>Terminal</h3><p>The text window where you control your computer by typing — files, installs, and running your code.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#E2664F"><span class="ic">&lt;/&gt;</span><span class="expand">HyperText Markup Language</span><h3>HTML</h3><p>Structures a page's content — headings, paragraphs, links, images — without deciding how any of it looks.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#5E8CE6"><span class="ic">#</span><span class="expand">Cascading Style Sheets</span><h3>CSS</h3><p>Controls how that structure looks: color, spacing, layout, fonts, and motion.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#D8A63D"><span class="ic">JS</span><span class="expand">A programming language</span><h3>JavaScript</h3><p>Makes a page interactive — reacting to clicks, updating content, and talking to servers.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#55A873"><span class="ic">PY</span><span class="expand">A programming language</span><h3>Python</h3><p>Known for clean, readable syntax — used for scripting, data work, and backend applications.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#9A78D0"><span class="ic">SQL</span><span class="expand">Structured Query Language</span><h3>SQL</h3><p>How you ask a database for data — fetch it, filter it, sort it, or change it.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#45C4E5"><span class="ic">WEB</span><span class="expand">How it all ships</span><h3>The Web</h3><p>Browsers, servers, HTTP and DNS — and the hosting that puts your finished work on the internet.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#E07A4F"><span class="ic">GIT</span><span class="expand">A version control system</span><h3>Git</h3><p>Tracks every change to your code over time, so you can collaborate safely and never lose work.</p></div>
+      <div class="def-card tilt-card reveal" style="--c:#E94F64"><span class="ic">⚒</span><span class="expand">The proof</span><h3>Projects</h3><p>Twelve real applications — quiz games, trackers, kanban boards, API apps — built and explained step by step.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="subjects">
+    <div class="heading reveal">
+      <div><span class="eyebrow">CURRICULUM</span><h2>Pick your learning track.</h2></div>
+      <p>Start with Programming if you are completely new. The Terminal pairs with everything, then build web skills, go deeper with Python and SQL, ship it with Web &amp; Hosting, work like a pro with Git — and finish by building 12 real projects that prove you can. Hover a card to flip it.</p>
+    </div>
+    <div class="subject-grid" id="subjectGrid"></div>
+  </section>
+
+  <section class="section">
+    <div class="heading reveal">
+      <div><span class="eyebrow">YOUR ROADMAP</span><h2>From zero to building.</h2></div>
+      <p>You do not become a professional by memorizing every command. You grow by understanding, practicing, building, debugging, and shipping.</p>
+    </div>
+    <div class="path-grid">
+      <div class="path-step reveal"><b>01 · THINK</b><h4>Programming</h4><p>Learn algorithms, data, logic, functions, debugging and testing.</p></div>
+      <div class="path-step reveal"><b>02 · BUILD</b><h4>Terminal + web</h4><p>Control your computer by typing, then create interfaces with HTML, CSS and JavaScript.</p></div>
+      <div class="path-step reveal"><b>03 · GO DEEPER</b><h4>Python + SQL</h4><p>Build stronger software and learn how applications work with data.</p></div>
+      <div class="path-step reveal"><b>04 · SHIP</b><h4>Web + Git</h4><p>Deploy your site to the internet and track every change with confidence.</p></div>
+      <div class="path-step reveal"><b>05 · PROVE IT</b><h4>Projects</h4><p>Build 12 real applications — each explained step by step, with working code and a challenge.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="heading reveal">
+      <div><span class="eyebrow">THE METHOD</span><h2>Read it. Run it. Try it.</h2></div>
+      <p>Every lesson follows the same learning loop, with enough explanation to understand why the code works.</p>
+    </div>
+    <div class="method">
+      <div class="reveal"><b>STEP 1</b><h4>Understand the idea</h4><p>Definition first, then a plain-language explanation and a visual mental model.</p></div>
+      <div class="reveal"><b>STEP 2</b><h4>See it work</h4><p>Run the example, inspect the output, and predict what will happen before you change it.</p></div>
+      <div class="reveal"><b>STEP 3</b><h4>Practice + build</h4><p>Complete a practical task, solve the challenge, and turn lessons into projects.</p></div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div>
+      <span class="eyebrow">THE IDEA</span>
+      <h2>Simple enough to start.<br>Good enough to grow with you.</h2>
+    </div>
+    <p>MeenLearn is a learning project by <strong>MeenDev</strong>, built around understanding the reason behind code, seeing the result immediately, and practicing it until it sticks. Ten learning tracks, one consistent way of teaching them — lessons even tell you which apps to install before you start, every lesson's code can be opened in the live playground, and the AI Tutor knows every lesson on this site and remembers your questions.</p>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 MeenLearn <b>by MeenDev</b></span>
+  <span>Built for people who learn by doing</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="lessons1.js"></script>
+<script src="lessons2.js"></script>
+<script src="lessons3.js"></script>
+<script src="lessons4.js"></script>
+<script src="lessons5.js"></script>
+<script src="script.js"></script>
+<script>initHome();</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The MeenLearn AI Tutor — a tutor that knows all 10 tracks, with saved conversation history, learning goals and your progress stats. No account, no setup.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>AI Tutor — MeenLearn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="brand" href="index.html"><span class="mark">&lt;/&gt;</span>Meen<span style="color:var(--gold)">Learn</span><small>by MeenDev</small></a>
+    <nav class="headnav">
+      <a href="index.html">Home</a>
+      <a href="ai.html" aria-current="page">AI Tutor</a>
+      <a href="playground.html">Playground</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div class="headtools">
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">&#9776;</button>
+      <button id="theme" aria-label="Toggle theme">☾</button>
+    </div>
+  </div>
+  <div class="tabstrip-wrap"><nav class="tabstrip" id="tabstrip" aria-label="Learning tracks"></nav></div>
+</header>
+
+<main class="dash">
+  <section class="dash-hero">
+    <div>
+      <span class="eyebrow">✦ AI TUTOR · BUILT INTO MEENLEARN</span>
+      <h1>Your tutor, with a memory.</h1>
+      <p>I know all 10 tracks and every one of the 203 lessons — ask about any concept, pick a learning goal, and watch your stats grow. Your conversation is saved right here in your browser, so next time we pick up where we left off.</p>
+    </div>
+    <div class="dash-stats">
+      <div class="dash-stat"><b id="dQuestions">0</b><span>questions asked</span></div>
+      <div class="dash-stat"><b id="dTracks">10</b><span>tracks</span></div>
+      <div class="dash-stat"><b id="dLessons">0</b><span>lessons done</span></div>
+      <div class="dash-stat"><b id="dQuizzes">0/10</b><span>quizzes 4+/5</span></div>
+    </div>
+  </section>
+
+  <section class="dash-body">
+    <aside class="dash-side">
+      <div class="dash-card">
+        <span class="eyebrow">LEARNING GOALS</span>
+        <div id="dGoals"></div>
+      </div>
+      <div class="dash-card">
+        <span class="eyebrow">ASK ABOUT A TRACK</span>
+        <div id="dChips"></div>
+      </div>
+      <div class="dash-card">
+        <span class="eyebrow">REMEMBER</span>
+        <p style="font-size:12px;color:var(--muted);margin:0">I answer from the MeenLearn lesson library. This page just gives me room: history, goals and your numbers.</p>
+      </div>
+    </aside>
+
+    <section class="dash-chat">
+      <div class="dash-chat-head">
+        <span>Conversation <small>· saved in your browser</small></span>
+        <button id="dClear" class="btn small ghost" type="button">New chat</button>
+      </div>
+      <div id="dSuggest" class="ai-suggest"></div>
+      <div id="dMessages" class="ai-messages" aria-live="polite"></div>
+      <form id="dForm" class="ai-form">
+        <input id="dInput" placeholder="Ask about any lesson, track, or app…" autocomplete="off" aria-label="Question">
+        <button type="submit" aria-label="Send">→</button>
+      </form>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 MeenLearn <b>by MeenDev</b></span>
+  <span>Built for people who learn by doing</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="lessons1.js"></script>
+<script src="lessons2.js"></script>
+<script src="lessons3.js"></script>
+<script src="lessons4.js"></script>
+<script src="lessons5.js"></script>
+<script src="script.js"></script>
+<script>initAIDashboard();</script>
+</body>
+</html>
